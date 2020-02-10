@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <!-- Top of the page -->
+    <head>
+
+        <!-- character tyoe -->
+        <meta charset="UTF-8">
+
+        <!-- Responsiveness of the webpage, sets the width size to the device size -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--- Title of the page -->
+        <title>Home Page</title>
+
+        <!-- Including external files : CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/mediaQueries.css">
+
+        <!-- Bootstrap icons
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet">
+        
+        <!-- google fonts to use in css file: font-family: 'Kaushan Script', cursive; -->
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        
+        <!-- Social media icons integration -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    
+    <!-- Body -->
+    <body>
+
+        <!-- first image or section -->
+        <div class="background1">
+            <header>
+
+                <div class="logo">
+                    <a href="index.html" class="logoText">ecEnergyLtd</a>
+                </div>
+
+                <nav>
+                    <div class="toggle">
+                            <a href="index.html" class="logoText">ecEnergyLtd</a>
+                            <i class="fa fa-bars menu1" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- Menu items -->
+                    <ul class="">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="uploadMeterReading.html">Upload</a></li>
+                        <li><a href="submitPayment.html">Pay</a></li>
+                        <li><a href="myAccount.html">Account</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+
+            <!-- jquery integration -->
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+            <!-- jQuery script integration to handle menu bar-->
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('.menu1').click(function(){
+                        $('ul').toggleClass('active');
+                    })
+                })
+            </script>
+            <!-- end jQuery script integration to handle menu bar-->
+
+            <!-- text contained within the image -->
+            <div class="backgroundText">
+                <!-- text -->
+                <span class="border">
+                    Welcome to our brand new website
+                </span>
+            </div>
+
+        </div>
+
+        <!-- first section -->
+        <section class="section section-light">
+
+            <h2 id="quickPagesText">These are some of the things you can do in our website</h2>
+            
+            <!-- Start of div "Quick Access to pages" -->
+            <div class="quickPages">
+
+                <div class="meterReading">
+                    <button type="button" id="btnQuickPages" onclick= "window.location.href= ' uploadMeterReading.html'"> Upload Meter Reading </button> 
+                </div> 
+
+                <div class="payment">
+                    <button type="button" id="btnQuickPages" onclick= "window.location.href= ' submitPayment.html'"> Submit Payment </button> 
+                </div>
+                
+                <div class="account">
+                    <button type="button" id="btnQuickPages" onclick= "window.location.href= ' myAccount.html'"> Check Your Account</button> 
+                </div>
+                    
+            </div> 
+            <!-- End of div quickPages -->
+
+        </section>
+
+        <!-- Second image or section -->
+        <div class="background2">
+
+            <!-- text contained within the image -->
+            <div class="backgroundText">
+                <!-- text -->
+                <span class="border">
+                    About Us
+                </span>
+            </div>
+        </div>
+
+        <!-- second section -->
+        <section class="section section-dark">
+
+            <h2>A little bit about us and our history</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio quaerat, dolorum commodi accusamus animi itaque non facere 
+                obcaecati eum necessitatibus alias fugit architecto qui corrupti dignissimos cum? Doloribus, asperiores repellat! <br> <br>
+
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, consequuntur est pariatur ad commodi tempore?
+                Impedit similique, pariatur quas illum quos quis. Fugiat consequuntur quisquam, suscipit minus expedita 
+                voluptates facere quam aliquam ipsa fuga qui distinctio aut dignissimos! Eligendi aspernatur eos nam fuga 
+                distinctio! Non, sed. Aperiam a et, officiis saepe repellendus iste veritatis sit libero nemo? Quasi, quam!
+                Dolorem, debitis delectus quo modi mollitia, libero quis vero provident nemo perferendis quisquam saepe 
+                excepturi minima officiis sed suscipit at labore commodi voluptate numquam aut nobis reiciendis et quod? 
+                Harum sit repellat, beatae sapiente cupiditate obcaecati blanditiis autem eveniet eum perferendis?
+            </p>
+    
+        </section>
+
+        <!-- Third image or section -->
+        <div class="background3">
+
+            <!-- text contained within the image -->
+            <div class="backgroundText">
+                <!-- text -->
+                <span class="border">
+                    Stay in Contact
+                </span>
+            </div>
+        </div>
+
+        <!-- Third section -->
+        <dic class="contact">
+
+            <!--The div element for the map -->
+            <div id="map" class="map"> 
+
+            </div>
+            
+            <!-- Script integrating google Map API -->
+            <script>
+                // Initialize and add the map
+                function initMap() {
+                  // The location of ecEnergy Ltd.
+                  var uluru = {lat: 52.5969409, lng: 1.7209305};
+                  // The map, centered at Uluru
+                  var map = new google.maps.Map(
+                      document.getElementById('map'), {zoom: 14, center: uluru});
+                  // The marker, positioned at Uluru
+                  var marker = new google.maps.Marker({position: uluru, map: map});
+
+                var infowindow = new google.maps.InfoWindow({content:'<strong>East Coast Energy Ltd.</strong><br>Suffolk Rd<br>NR31 0ED Great Yarmouth<br>'});
+                google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+                infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+            </script>
+
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdun-cQnqGKsCQu6l6hvbDaBLPxudNjew&callback=initMap">
+            </script>
+            <!-- End of google Map API integration -->
+
+            <!--The div element for social media icons -->
+            <div class="social-media">
+                <h1 id="phone"> Phone Number: +41 800123547</h1>  <br>
+                <!-- Add font awesome icons -->
+                <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/" target="_balnk" class="fa fa-twitter"></a>
+                <a href="https://uk.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+
+        <footer>
+            <p> © Copyright East Coast Energy Ltd. 2019 - All Rights Reserved</p>
+        </footer>
+
+    </body>
+</html>

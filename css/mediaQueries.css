@@ -1,0 +1,188 @@
+
+/* **** Responiveness of the page   // rules for different screen resolutions***** */
+
+@media (max-width:930px) {
+    
+    .contact{
+        width: 100%;
+    }
+    .contact .map{
+        width: 100%;
+    }
+    .contact .social-media{
+        width: 100%;
+        padding-top: 300px;
+    }
+    .payment{
+        width: 50%;
+    }
+    .meterReading{
+        width:50%
+    }
+    .account{
+        width: 100%;
+    }
+
+    footer{
+        margin-top: 10em;
+    }
+
+}
+
+/* **** specific rules for resolutions <= 895px ***** */
+    /* displays the menu toggle , does not display the menu items (i.e. Home,Pay , About, etc) until the toggle is active (clicked/touched)  */
+
+@media (max-width:895px){
+
+    .logo{
+        display: none;
+    }
+    .toggle{
+        width: 100%;
+        display: block;
+    }
+
+    .toggle a{
+        float: left;
+    }
+
+    ul
+    {
+        width: 100%;
+        display: none;
+    }
+    ul li
+    {
+        display: block;
+        text-align: center;
+    }
+
+    .backgroundText{
+        top: 62%;
+    }
+    .border{
+        font-size: 18px;
+    }
+
+    .active{
+        display: block;
+    }
+}
+
+
+/* **** specific rules for resolutions  <= 880px  ***** */
+
+@media only screen and (max-width: 880px) {
+    
+    .border{
+        font-size: 15px;
+    }
+
+    .toggle a{
+        font-size: 27px;
+    }
+    nav{
+        font-size: 20px;
+    }
+    .menu{
+        width: 30px;
+    }
+
+    .section{
+        font-size: 16px;
+    }
+  }
+
+
+  /* **** specific rules for resolutions  <= 600px  ***** */
+    /* displays the menu toggle, menu content and additionally formats text */
+
+@media only screen and (max-width: 600px) {
+   
+    .border{
+        font-size: 12px;
+    }
+
+    .logo{
+        font-size: 25px;
+        
+    }
+    .menu{
+        width: 30px;
+    }
+
+    .section{
+        font-size: 14px;
+    }
+
+    nav ul{
+        width: 60%;
+    }
+    
+    footer p{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .social-media .fa{
+        font-size: 12px;
+    }
+
+    .fa-facebook {
+        width: 12px;
+    }
+
+    #phone{
+        font-size: 12px;    
+    }
+
+    .payment{
+        width: 100%;
+        padding: 1em;
+    }
+    .meterReading{
+        width:100%;
+        padding: 1em;
+    }
+    .account{
+        width: 100%;
+        padding: 1em;
+    }
+
+    .quickPages{
+        padding-bottom: 10em;
+        align-content: center;
+    }
+
+  }
+
+  /* **** specific rules for resolutions <= 550px  ***** */
+    /* displays every container to fit the screen, additionally formats the text */
+
+  @media only screen and (max-width: 550px) {
+
+    .border{
+        font-size: 10px;
+    }
+
+    .logo{
+        font-size: 20px;
+        margin-left: -5%;
+    }
+    .menu{
+        width: 28px;
+    }
+
+    .section{
+        font-size: 14px;
+    }
+
+    nav ul{
+        width: 60%;
+    }
+
+    #phone{
+        font-size: 8px;    
+    }
+  }
+

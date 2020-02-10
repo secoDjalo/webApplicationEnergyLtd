@@ -1,0 +1,284 @@
+/* Stykes for body and html tags*/
+
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+/* Adding parallax scrolling effect*/
+.background1, .background2, .background3{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* the value fixed gives the illusion of parallax effect, if changed to scroll the effect desapears*/
+    background-attachment: fixed;
+
+}
+
+/* adjusting images */
+.background1{
+    background-image: url(../images/energy.jpg);
+    min-height: 100%;
+}
+
+.background2{
+    background-image: url(../images/electric.jpg);
+    min-height: 180px;
+}
+
+.background3{
+    background-image: url(../images/gas.jpg);
+    min-height: 180px;
+}
+
+/* Sections alignment and adjustments*/
+.section{
+    text-align: center;
+    padding: 8px 80px;
+}
+
+.section-dark{
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+section-light{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+/* alignment of paragraph within background image*/
+.backgroundText{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #111;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.backgroundText .border{
+
+    background-color: rgba(17, 17, 17, 0.274);
+    color: #fff;
+    padding: 20px;
+}
+
+/* header element */
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* logo adjustment*/
+.logo{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 37px;
+    text-align: center;
+    padding-top: 1em;
+    padding-left: 1em;
+    color: #fff;
+    width: 20%px;
+    float: left;
+}
+
+.logoText{
+    text-decoration: none;
+    color: white;
+}
+
+/* Navegation bar*/
+
+nav{
+    font-family: 'Kaushan Script', cursive;
+    width: 100%;
+    background: inherit;
+    font-size: 24px;
+    padding-top: 1.5em;
+    text-align: right;
+}
+
+ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 12px;
+}
+
+ul li:hover{
+    background: rgb(116, 135, 243);
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* toggle formatting*/
+.toggle{
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: -.7em;
+    margin-right: -13.5em;
+    background: inherit;
+    text-align: right;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 36px;
+    display: none;
+}
+
+h1 #quickPagesText{
+    padding-top: 1em;
+}
+/* Defines width, font-weight and aligns content to the center*/
+.quickPages{
+    width: 100%;
+    text-align: center;
+    font-weight: 10;
+    padding-bottom: 1em;
+    margin-bottom: 8em;
+   margin-top: 3em;
+}
+
+/* Defines width and floats the content to the left next to the previous container*/
+.meterReading{
+    float: left;
+    width: 33%;
+}
+
+/* Defines width and floats the content to the left next to the previous container*/
+.payment{
+    float: left;
+    width: 34%;
+}
+
+/* Defines width and floats the content to the left next to the previous container*/
+.account{
+    float: left;
+    width: 33%;
+    
+}
+
+/*** GHOST BUTTONS*****
+ Customises buttons, and applies the ghost button concept */
+ #btnQuickPages{
+    background-color: #7fd3f9; /* Blue */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    width: 210px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 25px;
+}
+#btnQuickPages:hover{
+    background: rgba(0,0,0,0);
+	color: #7fd3f9;
+	box-shadow: inset 0 0 0 3px #7fd3f9;
+}
+
+/*** END OF GHOST BUTTONS***** */
+
+.contact{
+    width: 100%;
+    align-content: center;
+}
+
+/* Set the size of the div element that contains the map */
+.contact .map{
+    margin-top: 1em;
+    align-content: center;
+    width: 40%;
+    height: 400px;
+    background-color: grey;
+}
+
+/* Socila media icons */
+.contact .social-media{
+    width: 50%;
+    margin-top: -15em;
+    position: inherit;
+    float: right;
+    text-align: center;
+}
+
+.contact .social-media h1{
+    color: #000;
+    font-size: 19.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: -7em;
+    text-align: center;
+}
+.social-media .fa{
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    width: 30px;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+/* Footer */
+
+footer{
+    font-size: 16px;
+    height: 100px;
+    background-color: #345684;
+    color: #fff;
+    text-align: center;
+}
+
+footer p{
+    padding-top: 2em;
+    font-family: 'Kaushan Script', cursive;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* disabling parallax scrolling for smaller devices*/
+@media (max-width : 568px) {
+    .background1, .background2, .background3{
+        background-attachment: scroll;
+    }
+}

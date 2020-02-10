@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <!-- Top of the page -->
+    <head>
+
+        <!-- character tyoe -->
+        <meta charset="UTF-8">
+
+        <!-- Responsiveness of the webpage, sets the width size to the device size -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--- Title of the page -->
+        <title>My Account</title>
+
+        <!-- Including external files : CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/mediaQueries.css">
+        <link rel="stylesheet" type="text/css" href="css/formsCss.css">
+
+        <!-- Bootstrap icons
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet">
+        
+        <!-- google fonts to use in css file: font-family: 'Kaushan Script', cursive; -->
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        
+        <!-- Social media icons integration -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--  Form Validation with JS-->
+        <script>
+            function checkInputIsNumber()
+                {
+                    //creates a variable and gives it the value of Customer_idCustomer field in the form
+                    var input =document.forms["search"]["idNumber"].value;
+
+                    //Creates a variables at sets only number values to it
+                    var condition=/^[0-9]+$/;
+
+                    //if input does not mutch with condition if alerts the user to input number 
+                    if (!input.match(condition))
+                    {
+                        alert("Your ID Number must be numeric");
+                        return false;
+                    }
+                }
+        </script>
+        <!--  End of Form Validation with -->
+
+    </head>
+    
+    <!-- Body -->
+    <body>
+
+        <!-- first image or section -->
+        <div class="background1">
+            <header>
+
+                <div class="logo">
+                    <a href="index.html" class="logoText">ecEnergyLtd</a>
+                </div>
+
+                <nav>
+                    <div class="toggle">
+                            <a href="index.html" class="logoText">ecEnergyLtd</a>
+                            <i class="fa fa-bars menu1" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- Menu items -->
+                    <ul class="">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="uploadMeterReading.html">Upload</a></li>
+                        <li><a href="submitPayment.html">Pay</a></li>
+                        <li><a href="myAccount.html">Account</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+
+            <!-- jquery integration -->
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+            <!-- jQuery script integration to handle menu bar-->
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('.menu1').click(function(){
+                        $('ul').toggleClass('active');
+                    })
+                })
+            </script>
+            <!-- end jQuery script integration to handle menu bar-->
+
+            <!-- text contained within the image -->
+            <div class="backgroundText">
+                <!-- text -->
+                <span class="border">
+                    Welcome to your Account
+                </span>
+            </div>
+
+        </div>
+
+        <!-- first section -->
+        <section class="section section-light">
+
+            <!-- Form for the user -->
+            <div class="content" align="center">
+                <p style="font-size:20px; text-align: center; font-weight: bold";> Please Enter your ID number </p>
+                
+                <form name="search" method="post" action="../searchGYelectricCustomers.php" onsubmit="return checkInputIsNumber()">
+                    <input type="text" name="idNumber" placeholder ="Input your ID Number" required/>
+                    <input type="submit" name="Search" value="Search"/>
+                </form>
+                
+            </div>
+            <!-- End of Form -->
+
+        </section>
+
+        
+
+        <footer>
+            <p> © Copyright East Coast Energy Ltd. 2019 - All Rights Reserved</p>
+        </footer>
+
+    </body>
+</html>
